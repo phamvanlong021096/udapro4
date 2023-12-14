@@ -1,0 +1,27 @@
+{
+	"name": "NYC_Payroll_AGENCY_MD",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapse_connection",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dataset for synapse"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "dirpayrollfiles",
+				"container": "udanewfilesystemgen2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
